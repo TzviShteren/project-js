@@ -6,6 +6,11 @@ const CUSTOM_MOVIE = `https://api.themoviedb.org/3/search/movie?query=${POPULARI
 
 const MOVIE_BY_ID = `https://api.themoviedb.org/3/movie/${POPULARITY}` // movie_id
 
+const Now_Playing = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1'
+
+
+TOP_RATED_URL.id
+
 const options = {
     method: 'GET',
     headers: {
@@ -16,6 +21,21 @@ const options = {
   
   fetch(TOP_RATED_URL, options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => displayMovies(data.results))
     .catch(err => console.error(err));
+
+    // Function to display movies
+    const displayMovies = (movies) => {
+      moviesContainer.innerHTML = '';
+      movies.forEach((movie) => {
+          const movieCard = document.createElement('div');
+          movieCard.classList.add('movie-card');
+          movieCard.innerHTML = `
+              <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}" alt="${movie.title}">
+              <h3>${movie.title}</h3>
+              <p>${movie.release_date}</p>
+          `;
+          moviesContainer.appendChild(movieCard);
+      });
+  };
 

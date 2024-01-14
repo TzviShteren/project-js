@@ -1,9 +1,62 @@
 body {
-    background-color: #333;
-    
+     background-color: #333;
+     margin: 0;
+     padding: 0;
  }
- .top-bar{
-      color: azure;
-      display: flex;
-      justify-content: space-between;
+ 
+ .top-bar {
+     color: azure;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #222;
+     padding: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
  }
+ 
+ .icon {
+     height: 50px;
+     width: 50px;
+ }
+ 
+ .Now_playing-button,
+ .favourites-button,
+ .search-button {
+     padding: 8px 15px;
+     margin: 0 10px;
+     background-color: #3498db;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+ 
+ 
+ .Now_playing-button:hover,
+ .favourites-button:hover,
+ .search-button:hover {
+     background-color: #2980b9;
+ }
+ 
+ /* Add styles for footer if needed */
+ .footer {
+     background-color: #222;
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+ }
+ 
+ .page {
+     margin-top: 20px;
+ }
+ 
+ .Sort-title {
+     color: #3498db;
+ }
+ 
+ /* Add more styles based on your needs */
+ 
